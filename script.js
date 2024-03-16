@@ -36,7 +36,8 @@ const ekranaYazdir = (resim) => {
 const form = document.querySelector("form");
 const searchInput = document.querySelector("#searchInput");
 
-form.addEventListener("submit",function(){
+form.addEventListener("submit",function(e){
+    e.preventDefault();
     let searchText = searchInput.value.trim().toLowerCase();
     // console.log(searchText);
     searchInput.value = "";
